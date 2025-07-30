@@ -26,5 +26,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ```
 Generar nuevo componente 
 ng generate component <ruta>
-ng g c components/footer
+- ng g c components/footer
 ```
