@@ -19,8 +19,7 @@ export class HeroesComponent implements OnInit {
     // console.log(this.heroes);
 
   }
-  verHeroe(idx:number) {
-    this.router.navigate(['/heroe', idx]);
-    this._heroesService.getHeroes()[idx]; // This line is not necessary, but it shows how to access a hero by index 
+ verHeroe(idx:number) {
+     this.router.navigate(['/heroe', idx]); 
   }
 }
