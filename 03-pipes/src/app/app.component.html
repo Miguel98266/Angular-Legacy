@@ -72,20 +72,26 @@
           <td>date</td>
           <td>{{fecha|date}}</td>
         </tr>
-         <tr>
+        <tr>
           <td>{{fecha}} </td>
           <td>date:'medium'</td>
           <td>{{fecha|date:'medium'}}</td>
         </tr>
-         <tr>
+        <tr>
           <td>{{fecha}} </td>
           <td>date:'short'</td>
           <td>{{fecha|date:'short'}}</td>
         </tr>
-         <tr>
+        <tr>
           <td>{{fecha}} </td>
-          <td>date:'MMMM - dd'</td>
-          <td>{{fecha|date:'MMMM - dd'}}</td>
+          <td>date:'MMMM - dd':'':'{{idioma}}'
+            <br>
+            <button class="btn btn-primary" (click)="idioma = 'es'">Español</button>
+            <button class="btn btn-secundary" (click)="idioma = 'fr'">Frances</button>
+            <button class="btn btn-success" (click)="idioma = 'en'">Ingles</button>
+            
+          </td>
+          <td>{{fecha|date:'MMMM - dd':'':idioma}}</td>
         </tr>
       </tbody>
     </table>
