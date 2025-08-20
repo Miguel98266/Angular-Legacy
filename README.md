@@ -5,5 +5,5 @@
 ## Generar nuevo componente 
 ```
 ng generate component <ruta>
-- ng g c components/footer
+- ng g c components/footer --skipTests
 ```
