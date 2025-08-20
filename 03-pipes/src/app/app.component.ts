@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,5 +8,28 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   nombre: string = 'Miguel Angel';
-  arreglo=[1,2,3,4,5,6,7,8,9,10];
+  nombre2: string = 'mIgUeL aNgEl';
+  arreglo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  PI: number = Math.PI;
+  porcentaje: number = 0.234;
+  salario: number = 1234.5;
+  fecha: Date = new Date();
+  acti: boolean = true;
+  idioma: string = 'es';
+  videoUrl: string = 'https://www.youtube.com/embed/8bQ2d1a3g0c';
+  valorPromesa = new Promise<string>((resolve, reject) => {
+    setTimeout(() => {
+      resolve('¡Llegó la data!');
+    }, 3500);
+  });
+
+  heroe = {
+    nombre: 'Logan',
+    clave: 'Wolverine',
+    edad: 500,
+    direccion: {
+      calle: 'Primera',
+      numero: 20
+    }
+  }
 }

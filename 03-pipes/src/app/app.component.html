@@ -13,11 +13,16 @@
       </thead>
       <tbody>
         <tr>
+          <td>{{nombre2}} </td>
+          <td>capitalizado</td>
+          <td>{{nombre2|capitalizado:true}}</td>
+        </tr>
+        <tr>
           <td>{{nombre}} </td>
           <td>uppercase</td>
           <td>{{nombre|uppercase}}</td>
         </tr>
-         <tr>
+        <tr>
           <td>{{nombre}} </td>
           <td>lowercase</td>
           <td>{{nombre|lowercase}}</td>
@@ -37,12 +42,98 @@
           <td>slice:0:3</td>
           <td>{{arreglo|slice:0:3}}</td>
         </tr>
+        <tr>
+          <td>{{PI}} </td>
+          <td>number:'3.0-0'</td>
+          <td>{{PI|number:'3.0-0'}}</td>
+        </tr>
+        <tr>
+          <td>{{PI}} </td>
+          <td>number:'.0-2'</td>
+          <td>{{PI|number:'.0-2'}}</td>
+        </tr>
+        <tr>
+          <td>{{porcentaje}} </td>
+          <td>percent</td>
+          <td>{{porcentaje|percent}}</td>
+        </tr>
+        <tr>
+          <td>{{porcentaje}} </td>
+          <td>percent:'2.2-2'</td>
+          <td>{{porcentaje|percent:'2.2-2'}}</td>
+        </tr>
+        <tr>
+          <td>{{salario}} </td>
+          <td>currency:'CAD'</td>
+          <td>{{salario|currency:'CAD':'symbol':'.0-0'}}</td>
+        </tr>
+        <tr>
+          <td>{{valorPromesa}} </td>
+          <td>asycn</td>
+          <td>{{valorPromesa|async}}</td>
+        </tr>
+        <tr>
+          <td>{{fecha}} </td>
+          <td>date</td>
+          <td>{{fecha|date}}</td>
+        </tr>
+        <tr>
+          <td>{{fecha}} </td>
+          <td>date:'medium'</td>
+          <td>{{fecha|date:'medium'}}</td>
+        </tr>
+        <tr>
+          <td>{{fecha}} </td>
+          <td>date:'short'</td>
+          <td>{{fecha|date:'short'}}</td>
+        </tr>
+        <tr>
+          <td>{{fecha}} </td>
+          <td>date:'MMMM - dd':'':'{{idioma}}'
+            <br>
+            <button class="btn btn-primary" (click)="idioma = 'es'">Español</button>
+            <button class="btn btn-secundary" (click)="idioma = 'fr'">Frances</button>
+            <button class="btn btn-success" (click)="idioma = 'en'">Ingles</button>
+
+          </td>
+          <td>{{fecha|date:'MMMM - dd':'':idioma}}</td>
+        </tr>
+
+        <tr>
+          <td>{{nombre}} </td>
+          <td>contrasena:{{acti}}
+            <br>
+            <button class="btn btn-primary" (click)="acti=!acti">Activar/Desactivar</button>
+          </td>
+          <td>{{nombre|activar:acti}}</td>
+        </tr>
       </tbody>
     </table>
     <h4>Slice</h4>
     <ul>
       <li *ngFor="let item of arreglo | slice:5:20">{{item}}</li>
     </ul>
+    <h3>JSON</h3>
+    <hr>
+    <div class="row">
+      <div class="col">
+        <pre>
+          {{heroe| json}}
+        </pre>
 
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<h3 class="mt-4"> Domseguro</h3>
+<hr>
+<div class="row">
+  <div class="col">
+    <iframe width="560" height="315" [src]="videoUrl | domseguro"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 </div>
